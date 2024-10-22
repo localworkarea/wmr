@@ -259,6 +259,12 @@ body {
 .hero__buttons {
   display: grid
 }
+.title-main {
+  font-weight: 500
+}
+.title-main span {
+  color: #066839
+}
 @media (min-width:30.06125em) {
   .menu {
     gap: .3125rem 1.875rem
@@ -340,6 +346,15 @@ body {
   }
   .hero__buttons {
     margin-top: 3.125rem
+  }
+  .services {
+    padding-top: 5rem
+  }
+  .services {
+    padding-bottom: 5rem
+  }
+  .title-main {
+    font-size: 4.375rem
   }
 }
 @media (max-width:90em) {
@@ -488,6 +503,15 @@ body {
   .hero__buttons {
     margin-top: 1.25rem
   }
+  .services {
+    padding-top: 2.5rem
+  }
+  .services {
+    padding-bottom: 2.5rem
+  }
+  .title-main {
+    font-size: 2.5rem
+  }
 }
 @media (min-width:90em)and (max-width:120em) {
   [class*=__container] {
@@ -514,6 +538,15 @@ body {
   }
   .hero__buttons {
     margin-top: clamp(1.25rem ,.6232974524rem + 2.084752123vw ,3.125rem)
+  }
+  .services {
+    padding-top: clamp(2.5rem ,1.6643966032rem + 2.7796694973vw ,5rem)
+  }
+  .services {
+    padding-bottom: clamp(2.5rem ,1.6643966032rem + 2.7796694973vw ,5rem)
+  }
+  .title-main {
+    font-size: clamp(2.5rem ,1.8732974524rem + 2.084752123vw ,4.375rem)
   }
 }
 @media (max-width:51.31125em)and (min-width:30.06125em) {
