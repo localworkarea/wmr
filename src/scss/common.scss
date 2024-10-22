@@ -6,8 +6,10 @@
   @include adaptiveValue("max-width", 1300, 1200,0,1920,1440);
 }
 body {
-  background-color: $lightgray;
+  // background-color: $lightgray;
+  background-color: #edf2f4;
 }
+
 
 .btn {
   display: grid;
@@ -63,4 +65,24 @@ body {
   font-weight: 700;
   line-height: 0.9;
   @include adaptiveValue("font-size", 100, 60,0,1920,480.98);
+}
+
+.title-main {
+  font-weight: 500;
+  @extend %marBottom40-20;
+  @include adaptiveValue("font-size", 70, 40,0,1920,480.98);
+  span {
+    color: $green;
+  }
+}
+
+
+%sectionPtPb {
+  @include adaptiveValue("padding-top", 100,40,0,1920,480.98);
+  @include adaptiveValue("padding-bottom", 100,40,0,1920,480.98);
+}
+
+
+%marBottom40-20 {
+  @include adaptiveValue("margin-bottom", 40, 20,0,1920,480);
 }

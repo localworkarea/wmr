@@ -158,7 +158,7 @@ body {
   padding-right: 1.25rem
 }
 body {
-  background-color: #ededed
+  background-color: #edf2f4
 }
 .btn {
   display: grid;
@@ -188,6 +188,12 @@ body {
 .title-hero {
   font-weight: 700;
   line-height: .9
+}
+.title-main {
+  font-weight: 500
+}
+.title-main span {
+  color: #066839
 }
 .header {
   position: fixed;
@@ -250,7 +256,7 @@ body {
   margin-bottom: 1.5625rem
 }
 .hero__txt {
-  line-height: 1.1;
+  line-height: 1.2;
   font-weight: 400
 }
 .hero__txt:not(:last-child) {
@@ -259,11 +265,68 @@ body {
 .hero__buttons {
   display: grid
 }
-.title-main {
-  font-weight: 500
+.services__list {
+  display: grid;
+  gap: .625rem
 }
-.title-main span {
-  color: #066839
+.services__item {
+  border: .125rem solid #121212;
+  border-radius: 1.25rem;
+  aspect-ratio: 1/1;
+  background-color: #fff;
+  font-weight: 500;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: .625rem
+}
+.services__item p {
+  flex: 1
+}
+.services__ic {
+  flex: 1
+}
+.services__ic img {
+  height: auto
+}
+.services__link {
+  width: 100%;
+  max-width: 23.75rem
+}
+.why {
+  min-height: 80svh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative
+}
+.why:before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  background-color: rgba(0,0,0,.6)
+}
+.why__container {
+  position: relative;
+  z-index: 3;
+  color: #fff
+}
+.why__title {
+  line-height: 1.2
+}
+.why__title span {
+  color: #121212;
+  display: inline-block;
+  background-color: #e9b44d;
+  border-radius: .5rem;
+  padding: .3125rem .625rem
+}
+.about__txt {
+  line-height: 1.2
 }
 @media (min-width:30.06125em) {
   .menu {
@@ -273,14 +336,24 @@ body {
     display: inline-block
   }
   .hero {
-    padding-top: 6.25rem;
-    padding-bottom: 3.125rem
+    padding-top: 6.25rem
+  }
+  .services__list {
+    grid-template-columns: repeat(auto-fit,minmax(12.5rem,1fr))
+  }
+  .why {
+    background-image: url(../img/why-bg-pc.webp)
   }
 }
 @media (min-width:43.81125em) {
   .hero__buttons {
     grid-template-columns: 1fr 1fr;
     gap: 1.875rem
+  }
+}
+@media (min-width:48.06125em) {
+  .services__item {
+    padding: 1.25rem
   }
 }
 @media (min-width:51.31125em) {
@@ -323,6 +396,11 @@ body {
     width: 65%
   }
 }
+@media (min-width:90em) {
+  .services__item {
+    font-size: 1.25rem
+  }
+}
 @media (min-width:120em) {
   [class*=__container] {
     max-width: 81.25rem
@@ -338,8 +416,28 @@ body {
   .title-hero {
     font-size: 6.25rem
   }
+  .title-main {
+    font-size: 4.375rem
+  }
+  .about,
+  .services,
+  .why {
+    padding-top: 6.25rem
+  }
+  .about,
+  .services,
+  .why {
+    padding-bottom: 6.25rem
+  }
+  .services__list,
+  .title-main {
+    margin-bottom: 2.5rem
+  }
   .header__logo img {
     width: 9.375rem
+  }
+  .hero {
+    padding-bottom: 5rem
   }
   .hero__txt {
     font-size: 1.375rem
@@ -347,19 +445,37 @@ body {
   .hero__buttons {
     margin-top: 3.125rem
   }
-  .services {
-    padding-top: 5rem
+  .services__ic img {
+    width: 5rem
   }
-  .services {
-    padding-bottom: 5rem
+  .why__item {
+    font-size: 2.625rem
   }
-  .title-main {
-    font-size: 4.375rem
+  .why__item:not(:last-child) {
+    margin-bottom: 1.25rem
+  }
+  .about__txt {
+    font-size: 1.25rem
   }
 }
 @media (max-width:90em) {
   [class*=__container] {
     max-width: 75rem
+  }
+}
+@media (max-width:30em) {
+  .services__list,
+  .title-main {
+    margin-bottom: 1.25rem
+  }
+  .why__item {
+    font-size: 1.5625rem
+  }
+  .why__item:not(:last-child) {
+    margin-bottom: .625rem
+  }
+  .about__txt {
+    font-size: 1.125rem
   }
 }
 @media (max-width:62.06125em) {
@@ -453,6 +569,12 @@ body {
     cursor: default
   }
 }
+@media (max-width:51.31125em) {
+  .services__button {
+    display: flex;
+    justify-content: center
+  }
+}
 @media (max-width:43.81125em) {
   .hero__buttons {
     gap: .625rem
@@ -470,6 +592,19 @@ body {
   .title-hero {
     font-size: 3.75rem
   }
+  .title-main {
+    font-size: 2.5rem
+  }
+  .about,
+  .services,
+  .why {
+    padding-top: 2.5rem
+  }
+  .about,
+  .services,
+  .why {
+    padding-bottom: 2.5rem
+  }
   .header__logo img {
     width: 6.875rem
   }
@@ -480,8 +615,10 @@ body {
     display: none
   }
   .hero {
+    padding-bottom: 2.5rem
+  }
+  .hero {
     padding-top: 4.375rem;
-    padding-bottom: 1.875rem;
     justify-content: flex-end
   }
   .hero__bg {
@@ -503,14 +640,30 @@ body {
   .hero__buttons {
     margin-top: 1.25rem
   }
-  .services {
-    padding-top: 2.5rem
+  .services__list {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr
   }
-  .services {
-    padding-bottom: 2.5rem
+  .services__item {
+    padding: .625rem
   }
-  .title-main {
-    font-size: 2.5rem
+  .services__item {
+    font-size: 1rem
+  }
+  .services__item:last-child {
+    grid-column: 1/3;
+    aspect-ratio: unset
+  }
+  .services__ic img {
+    width: 3.75rem
+  }
+  .why {
+    background-image: url(../img/why-bg-mb.webp)
+  }
+}
+@media (max-width:21.31125em) {
+  .services__item p {
+    word-break: break-all
   }
 }
 @media (min-width:90em)and (max-width:120em) {
@@ -530,8 +683,24 @@ body {
   .title-hero {
     font-size: clamp(3.75rem ,2.9143966032rem + 2.7796694973vw ,6.25rem)
   }
+  .title-main {
+    font-size: clamp(2.5rem ,1.8732974524rem + 2.084752123vw ,4.375rem)
+  }
+  .about,
+  .services,
+  .why {
+    padding-top: clamp(2.5rem ,1.2465949049rem + 4.1695042459vw ,6.25rem)
+  }
+  .about,
+  .services,
+  .why {
+    padding-bottom: clamp(2.5rem ,1.2465949049rem + 4.1695042459vw ,6.25rem)
+  }
   .header__logo img {
     width: clamp(6.875rem ,6.0393966032rem + 2.7796694973vw ,9.375rem)
+  }
+  .hero {
+    padding-bottom: clamp(2.5rem ,1.6643966032rem + 2.7796694973vw ,5rem)
   }
   .hero__txt {
     font-size: clamp(1.125rem ,1.0414396603rem + .2779669497vw ,1.375rem)
@@ -539,14 +708,23 @@ body {
   .hero__buttons {
     margin-top: clamp(1.25rem ,.6232974524rem + 2.084752123vw ,3.125rem)
   }
-  .services {
-    padding-top: clamp(2.5rem ,1.6643966032rem + 2.7796694973vw ,5rem)
+  .services__ic img {
+    width: clamp(3.75rem ,3.3321983016rem + 1.3898347486vw ,5rem)
   }
-  .services {
-    padding-bottom: clamp(2.5rem ,1.6643966032rem + 2.7796694973vw ,5rem)
-  }
+}
+@media (min-width:30em)and (max-width:120em) {
+  .services__list,
   .title-main {
-    font-size: clamp(2.5rem ,1.8732974524rem + 2.084752123vw ,4.375rem)
+    margin-bottom: clamp(1.25rem ,.8333333333rem + 1.3888888889vw ,2.5rem)
+  }
+  .why__item {
+    font-size: clamp(1.5625rem ,1.2083333333rem + 1.1805555556vw ,2.625rem)
+  }
+  .why__item:not(:last-child) {
+    margin-bottom: clamp(.625rem ,.4166666667rem + .6944444444vw ,1.25rem)
+  }
+  .about__txt {
+    font-size: clamp(1.125rem ,1.0833333333rem + .1388888889vw ,1.25rem)
   }
 }
 @media (max-width:51.31125em)and (min-width:30.06125em) {
@@ -565,6 +743,16 @@ body {
 @media (max-width:75.06125em)and (min-width:51.31125em) {
   .hero__body {
     width: 75%
+  }
+}
+@media (min-width:30.06125em)and (max-width:48.06125em) {
+  .services__item {
+    padding: clamp(.625rem ,-.4187934028rem + 3.4722222222vw ,1.25rem)
+  }
+}
+@media (min-width:30.06125em)and (max-width:90em) {
+  .services__item {
+    font-size: clamp(1rem ,.8746167963rem + .4170924485vw ,1.25rem)
   }
 }
 @media (any-hover:hover) {

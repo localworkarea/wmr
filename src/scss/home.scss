@@ -3,6 +3,7 @@
   min-height: 100svh;
   display: flex;
   flex-direction: column;
+  @include adaptiveValue("padding-bottom", 80,40,0,1920,480.98);
   @media (min-width:toEm(820.98)){
     justify-content: center;
   }
@@ -11,11 +12,9 @@
   }
   @media (min-width:$mobileSmall){
     padding-top: toRem(100);
-    padding-bottom: toRem(50);
   }
   @media (max-width:$mobileSmall){
     padding-top: toRem(70);
-    padding-bottom: toRem(30);
     justify-content: flex-end;
   }
 	// .hero__bg
@@ -74,7 +73,7 @@
   }
   // .hero__txt
   &__txt {
-    line-height: 1.1;
+    line-height: 1.2;
     font-weight: 400;
     @include adaptiveValue("font-size", 22, 18,0,1920,480.98);
     &:not(:last-child) {
@@ -119,30 +118,135 @@
   }
   // .services__list
   &__list {
+    display: grid;
+    gap: toRem(10);
+    @extend %marBottom40-20;
+    @media (min-width:$mobileSmall){
+      grid-template-columns: repeat(auto-fit,minmax(toRem(200), 1fr));
+    }
+    @media (max-width:$mobileSmall){
+       grid-template-columns: 1fr 1fr; 
+       grid-template-rows: 1fr 1fr 1fr;
+    }
   }
   // .services__item
   &__item {
+    border: toRem(2) solid $mainColor;
+    border-radius: toRem(20);
+    aspect-ratio: 1/1;
+    background-color: #fff;
+    font-weight: 500;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: toRem(10);
+    @include adaptiveValue("padding", 20, 10,0,768.98,480.98);
+    @include adaptiveValue("font-size", 20, 16,0,1440,480.98);
+    p {
+      flex: 1;
+      @media (max-width: toEm(340.98)){
+        word-break: break-all;
+      }
+    }
+    &:last-child {
+      @media (max-width:$mobileSmall){
+         grid-column: 1/3;
+         aspect-ratio: unset; 
+      }
+    }
+  }
+	// .services__ic
+	&__ic {
+    flex: 1;
+    img {
+      height: auto;
+      @include adaptiveValue("width", 80, 60,0,1920,480.98);
+    }
+	}
+	// .services__button
+	&__button {
+    @media (max-width: toEm(820.98)){
+        display: flex;
+        justify-content: center;
+    }
+	}
+	// .services__link
+	&__link {
+    width: 100%;
+    max-width: toRem(380);
+	}
+}
+
+
+// === WHY SECTION ===========================
+.why {
+  min-height: 80svh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position: center;
+  position: relative;
+  @media (min-width:$mobileSmall){
+    background-image: url("../img/why-bg-pc.jpg");
+  }
+  @media (max-width:$mobileSmall){
+    background-image: url("../img/why-bg-mb.jpg");
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    inset: 0;
+    background-color: rgba(0,0,0,0.6);
+  }
+  @extend %sectionPtPb;
+  // .why__container
+  &__container {
+    position: relative;
+    z-index: 3;
+    color: #fff;
+  }
+  // .why__title
+  &__title {
+    line-height: 1.2;
+    span {
+      color: $mainColor;
+      display: inline-block;
+      background-color: $yellow;
+      border-radius: toRem(8);
+      padding: toRem(5) toRem(10);
+    }
+  }
+  // .why__list
+  &__list {
+  }
+  // .why__item
+  &__item {
+    @include adaptiveValue("font-size", 42, 25,0,1920,480);
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 20, 10,0,1920,480);
+    }
   }
 }
 
-%sectionPtPb {
-  @include adaptiveValue("padding-top", 80,40,0,1920,480.98);
-  @include adaptiveValue("padding-bottom", 80,40,0,1920,480.98);
-}
-
-.title-main {
-  font-weight: 500;
-  @include adaptiveValue("font-size", 70, 40,0,1920,480.98);
-  span {
-    color: $green;
+// ===  SECTION ===========================
+.about {
+  @extend %sectionPtPb;
+  // .about__container
+  &__container {
+  }
+  // .about__title
+  &__title {
+  }
+  // .about_txt
+  &__txt {
+    line-height: 1.2;
+    @include adaptiveValue("font-size", 20, 18,0,1920,480);
   }
 }
 
-
-
-
-// ===  SECTION ===========================
-// ===  SECTION ===========================
 // ===  SECTION ===========================
 // ===  SECTION ===========================
 // ===  SECTION ===========================
