@@ -1,0 +1,66 @@
+[class*="__container"] {
+  width: 100%;
+  margin-inline: auto;
+  padding-left: toRem(20);
+  padding-right: toRem(20);
+  @include adaptiveValue("max-width", 1300, 1200,0,1920,1440);
+}
+body {
+  background-color: $lightgray;
+}
+
+.btn {
+  display: grid;
+  place-items: center;
+  padding: toRem(5) toRem(25);
+  border-radius: toRem(20);
+  color: #fff;
+  text-align: center;
+  transition: color .3s ease, background-color .3s ease, border .3s ease;
+  font-size: toRem(18); 
+  // .btn_one
+  &_one {
+    min-height: toRem(40);
+    background-color: $green;
+    @media (any-hover: hover){
+      &:hover{
+        background-color: #fff;
+        color: $mainColor;
+      }
+    }
+  }
+  &_two,
+  &_three {
+    border: toRem(2) solid $green;
+    @include adaptiveValue("border-radius", 60, 25,0,1920,480.98);
+    @include adaptiveValue("min-height", 60, 50,0,1920,480.98);
+  }
+  // .btn_two
+  &_two {
+    background-color: $green;
+    @media (any-hover: hover){
+      &:hover{
+        color:$green;
+        background-color: #fff;
+      }
+    }
+  }
+  // .btn_three
+  &_three {
+    background-color: #fff;
+    color: $green;
+    @media (any-hover: hover){
+      &:hover{
+        color:#fff;
+        background-color:$mainColor;
+        border-color: $mainColor;
+      }
+    }
+  }
+}
+
+.title-hero {
+  font-weight: 700;
+  line-height: 0.9;
+  @include adaptiveValue("font-size", 100, 60,0,1920,480.98);
+}

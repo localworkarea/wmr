@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="uk">
+	@@include('html/_head.htm',{
+	"title":"WMR | HOME"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.htm',{})
+			<main class="page">
+				<section class="hero">
+					<div class="hero__bg">
+						<picture>
+							<source srcset="@img/hero-pc.png" media="(min-width: 30.061em)" type="image/webp">
+							<source srcset="@img/hero-mb.png" media="(max-width: 30.061em)" type="image/webp">
+							<img class="ibg" src="@img/hero-pc.png" width="725" height="403" alt="два професійні майстри ремонтують пральну машинку">
+						</picture>
+					</div>
+					<div class="hero__container">
+						<div class="hero__body">
+							<h1 class="hero__title title-hero">
+								Ремонт<br> пральних машин
+							</h1>
+							<p class="hero__txt">
+								Ми пропонуємо оперативні послуги з ремонту пральних машин різних типів і популярних брендів,  включаючи пральні машини з вертикальним завантаженням, окремі та комбіновані прально-сушильні блоки.
+							</p>
+							<p class="hero__txt">
+								Ви можете зручно записатися на ремонт, зателефонувавши нам або надіславши текстове повідомлення.
+							</p>
+							<div class="hero__buttons">
+								<a href="#" class="hero__btn btn btn_two" aria-label="замовити послугу">
+									Замовити майстра
+								</a>
+								<a href="#" class="hero__btn btn btn_three" aria-label="зателефонувати">
+									Отримати консультацію
+								</a>
+							</div>
+						</div>
+						
+					</div>
+				</section>
+				<section class="services">
+					<div class="services__container">
+						<h2 class="services__title title-main">
+							Наші <span>послуги</span>
+						</h2>
+						<p class="services__sub-title">що ми пропонуємо</p>
+						<ul class="services__list">
+							<li class="services__item">
+								✅ Ремонт пральних машин різних брендів
+							</li>
+							<li class="services__item">
+								✅ Діагностика пральних машин
+							</li>
+							<li class="services__item">
+								✅ Заміна деталей
+							</li>
+							<li class="services__item">
+								✅ Встановлення пральних машин
+							</li>
+							<li class="services__item">
+								✅ Обслуговування пральних машин
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="about">
+					<div class="about__container">
+						<h2 class="about__title title-main">
+							Про нас
+						</h2>
+						<p class="about_txt">
+							Ми професійно займаємося ремонтом пральних машин вже кілька років, пропонуючи якісні послуги з відновлення техніки. Спеціалізуємося виключно на ремонті пральних машин, що робить нас експертами у своїй справі. Наш підхід спрямований на використання лише оригінальних запчастин, що гарантує довговічність та надійність роботи. Кожна виконана нами робота супроводжується гарантією, що підкреслює наше прагнення до якості та турботи про клієнтів. Незалежно від складності поломки, ми завжди знаходимо оптимальне рішення, повертаючи вашу пральну машину до життя швидко та ефективно.
+						</p>
+					</div>
+				</section>
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_js.htm',{})
+	</body>
+</html>
