@@ -158,7 +158,17 @@ body {
   padding-right: 1.25rem
 }
 body {
-  background-color: #edf2f4
+  background-color: #fff
+}
+*::-webkit-scrollbar {
+  width: 5px
+}
+*::-webkit-scrollbar-track {
+  background-color: rgba(0,0,0,0)
+}
+*::-webkit-scrollbar-thumb {
+  background-color: #121212;
+  border-radius: 3px
 }
 .btn {
   display: grid;
@@ -176,7 +186,9 @@ body {
 }
 .btn_three,
 .btn_two {
-  border: .125rem solid #066839
+  border: .125rem solid #066839;
+  min-height: 3.75rem;
+  border-radius: 3.75rem
 }
 .btn_two {
   background-color: #066839
@@ -246,24 +258,51 @@ body {
   flex-direction: column
 }
 .hero__bg {
-  z-index: -1
+  position: absolute;
+  z-index: -1;
+  inset: 0
+}
+.hero__bg::before {
+  content: "";
+  position: absolute;
+  inset: 0
 }
 .hero__container {
   position: relative;
-  z-index: 2
+  z-index: 2;
+  display: flex
 }
-.hero__title:not(:last-child) {
-  margin-bottom: 1.5625rem
+.hero__body {
+  color: #fff
 }
-.hero__txt {
+.hero__top {
   line-height: 1.2;
   font-weight: 400
+}
+.hero__txt {
+  font-weight: 500
 }
 .hero__txt:not(:last-child) {
   margin-bottom: 1.25rem
 }
+.hero__item {
+  background-image: url(../img/icon/check_circle.svg);
+  background-repeat: no-repeat;
+  background-size: 1.375rem;
+  background-position: left;
+  padding-left: 1.875rem
+}
+.hero__item p {
+  display: inline-block
+}
+.hero__item:not(:last-child) {
+  margin-bottom: .25rem
+}
 .hero__buttons {
   display: grid
+}
+.services {
+  background-color: #ededed
 }
 .services__list {
   display: grid;
@@ -335,8 +374,23 @@ body {
   .menu__contacts span {
     display: inline-block
   }
-  .hero {
-    padding-top: 6.25rem
+  .hero__bg::before {
+    background-image: linear-gradient(90deg,#000 10%,rgba(0,0,0,0) 100%)
+  }
+  .hero__container {
+    flex: 1
+  }
+  .hero__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1
+  }
+  .hero__top {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center
   }
   .services__list {
     grid-template-columns: repeat(auto-fit,minmax(12.5rem,1fr))
@@ -359,14 +413,6 @@ body {
 @media (min-width:51.31125em) {
   .hero {
     justify-content: center
-  }
-  .hero__bg {
-    position: absolute;
-    top: 50%;
-    -webkit-transform: translate(0,-50%);
-    transform: translate(0,-50%);
-    right: 0;
-    width: 50%
   }
   .hero__title {
     max-width: 80%
@@ -393,10 +439,16 @@ body {
 }
 @media (min-width:75.06125em) {
   .hero__body {
-    width: 65%
+    max-width: 65%
   }
 }
 @media (min-width:90em) {
+  .hero {
+    padding-top: 9.375rem
+  }
+  .hero__title:not(:last-child) {
+    margin-bottom: 3.125rem
+  }
   .services__item {
     font-size: 1.25rem
   }
@@ -405,16 +457,8 @@ body {
   [class*=__container] {
     max-width: 81.25rem
   }
-  .btn_three,
-  .btn_two {
-    border-radius: 3.75rem
-  }
-  .btn_three,
-  .btn_two {
-    min-height: 3.75rem
-  }
   .title-hero {
-    font-size: 6.25rem
+    font-size: 5.625rem
   }
   .title-main {
     font-size: 4.375rem
@@ -437,9 +481,9 @@ body {
     width: 9.375rem
   }
   .hero {
-    padding-bottom: 5rem
+    padding-bottom: 3.75rem
   }
-  .hero__txt {
+  .hero__top {
     font-size: 1.375rem
   }
   .hero__buttons {
@@ -581,16 +625,8 @@ body {
   }
 }
 @media (max-width:30.06125em) {
-  .btn_three,
-  .btn_two {
-    border-radius: 1.5625rem
-  }
-  .btn_three,
-  .btn_two {
-    min-height: 3.125rem
-  }
   .title-hero {
-    font-size: 3.75rem
+    font-size: 3.125rem
   }
   .title-main {
     font-size: 2.5rem
@@ -615,27 +651,22 @@ body {
     display: none
   }
   .hero {
+    padding-top: 4.375rem
+  }
+  .hero {
     padding-bottom: 2.5rem
   }
   .hero {
-    padding-top: 4.375rem;
     justify-content: flex-end
   }
-  .hero__bg {
-    position: absolute;
-    inset: 0
-  }
   .hero__bg::before {
-    content: "";
-    position: absolute;
-    inset: 0;
     background-color: rgba(0,0,0,.6)
   }
-  .hero__body {
-    color: #fff
+  .hero__top {
+    font-size: 1rem
   }
-  .hero__txt {
-    font-size: 1.125rem
+  .hero__title:not(:last-child) {
+    margin-bottom: 1.5625rem
   }
   .hero__buttons {
     margin-top: 1.25rem
@@ -672,16 +703,8 @@ body {
   }
 }
 @media (min-width:30.06125em)and (max-width:120em) {
-  .btn_three,
-  .btn_two {
-    border-radius: clamp(1.5625rem ,.8313470278rem + 2.4322108101vw ,3.75rem)
-  }
-  .btn_three,
-  .btn_two {
-    min-height: clamp(3.125rem ,2.9160991508rem + .6949173743vw ,3.75rem)
-  }
   .title-hero {
-    font-size: clamp(3.75rem ,2.9143966032rem + 2.7796694973vw ,6.25rem)
+    font-size: clamp(3.125rem ,2.2893966032rem + 2.7796694973vw ,5.625rem)
   }
   .title-main {
     font-size: clamp(2.5rem ,1.8732974524rem + 2.084752123vw ,4.375rem)
@@ -700,10 +723,10 @@ body {
     width: clamp(6.875rem ,6.0393966032rem + 2.7796694973vw ,9.375rem)
   }
   .hero {
-    padding-bottom: clamp(2.5rem ,1.6643966032rem + 2.7796694973vw ,5rem)
+    padding-bottom: clamp(2.5rem ,2.0821983016rem + 1.3898347486vw ,3.75rem)
   }
-  .hero__txt {
-    font-size: clamp(1.125rem ,1.0414396603rem + .2779669497vw ,1.375rem)
+  .hero__top {
+    font-size: clamp(1rem ,.8746594905rem + .4169504246vw ,1.375rem)
   }
   .hero__buttons {
     margin-top: clamp(1.25rem ,.6232974524rem + 2.084752123vw ,3.125rem)
@@ -727,32 +750,30 @@ body {
     font-size: clamp(1.125rem ,1.0833333333rem + .1388888889vw ,1.25rem)
   }
 }
+@media (min-width:30.06125em)and (max-width:90em) {
+  .hero {
+    padding-top: clamp(4.375rem ,1.8673359263rem + 8.3418489708vw ,9.375rem)
+  }
+  .hero__title:not(:last-child) {
+    margin-bottom: clamp(1.5625rem ,.778854977rem + 2.6068278034vw ,3.125rem)
+  }
+  .services__item {
+    font-size: clamp(1rem ,.8746167963rem + .4170924485vw ,1.25rem)
+  }
+}
 @media (max-width:51.31125em)and (min-width:30.06125em) {
   .hero {
     justify-content: space-between
   }
-  .hero__bg {
-    position: relative;
-    width: 70%;
-    left: 50%;
-    -webkit-transform: translate(-50%,0);
-    transform: translate(-50%,0);
-    margin-bottom: 3.125rem
-  }
 }
 @media (max-width:75.06125em)and (min-width:51.31125em) {
   .hero__body {
-    width: 75%
+    max-width: 75%
   }
 }
 @media (min-width:30.06125em)and (max-width:48.06125em) {
   .services__item {
     padding: clamp(.625rem ,-.4187934028rem + 3.4722222222vw ,1.25rem)
-  }
-}
-@media (min-width:30.06125em)and (max-width:90em) {
-  .services__item {
-    font-size: clamp(1rem ,.8746167963rem + .4170924485vw ,1.25rem)
   }
 }
 @media (any-hover:hover) {

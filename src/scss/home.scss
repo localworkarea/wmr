@@ -3,69 +3,93 @@
   min-height: 100svh;
   display: flex;
   flex-direction: column;
-  @include adaptiveValue("padding-bottom", 80,40,0,1920,480.98);
+  @include adaptiveValue("padding-top", 150, 70,0,1440,480.98);
+  @include adaptiveValue("padding-bottom", 60,40,0,1920,480.98);
   @media (min-width:toEm(820.98)){
     justify-content: center;
   }
   @media (max-width: toEm(820.98)) and (min-width:$mobileSmall) {
     justify-content: space-between;
   }
-  @media (min-width:$mobileSmall){
-    padding-top: toRem(100);
-  }
   @media (max-width:$mobileSmall){
-    padding-top: toRem(70);
     justify-content: flex-end;
   }
 	// .hero__bg
 	&__bg {
-    z-index: -1;
-    @media (min-width:toEm(820.98)){
+    // @media (min-width:toEm(820.98)){
       position: absolute;
-      top: 50%;
-      transform: translate(0, -50%);
-      right: 0;
-      width: 50%;
-    }
-    @media (max-width: toEm(820.98)) and (min-width: $mobileSmall){
-      position: relative;
-      width: 70%;        
-      left: 50%;
-      transform: translate(-50%,0);
-      margin-bottom: toRem(50);
-    }
-    @media (max-width: $mobileSmall){
-        position: absolute;
+      z-index: -1;
+      // top: 50%;
+      // transform: translate(0, -50%);
+      // right: 0;
+      // width: 50%;
+    // }
+    // @media (max-width: toEm(820.98)) and (min-width: $mobileSmall){
+    //   position: relative;
+    //   width: 70%;        
+    //   left: 50%;
+    //   transform: translate(-50%,0);
+    //   margin-bottom: toRem(50);
+    // }
+    // @media (max-width: $mobileSmall){
+        // position: absolute;
         inset: 0;
         &::before {
           content:'';
           position: absolute;
           inset: 0;
-          background-color: rgba(0,0,0,0.6);
+          @media (min-width:$mobileSmall){
+            background-image: linear-gradient(90deg, #000 10%, rgba(0, 0, 0, 0) 100%);
+          }
+          @media (max-width:$mobileSmall){
+            background-color: rgba(0,0,0,0.6);
+          }
         }
-    }
+    // }
 	}
   // .hero__container
   &__container {
     position: relative;
     z-index: 2;
+    display: flex;
+    @media (min-width:$mobileSmall){
+      flex: 1;
+    }
   }
 	// .hero__body
 	&__body {
+    color: #fff; 
     @media (min-width:toEm(1200.98)){
-      width: 65%;
+      max-width: 65%;
     }
     @media (max-width:toEm(1200.98)) and (min-width: toEm(820.98)) {
-      width: 75%;        
+      max-width: 75%;        
+    }
+    @media (min-width:$mobileSmall){
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex: 1;
     }
     @media (max-width:$mobileSmall){
-       color: #fff; 
+    }
+	}
+	// .hero__top
+	&__top {
+    line-height: 1.2;
+    font-weight: 400;
+    @include adaptiveValue("font-size", 22, 16,0,1920,480.98);
+    @media (min-width:$mobileSmall){
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
 	}
   // .hero__title
   &__title {
     &:not(:last-child) {
-      margin-bottom: toRem(25);
+      @include adaptiveValue("margin-bottom", 50, 25,0,1440,480.98);
     }
     @media (min-width:toEm(820.98)){
       max-width: 80%;
@@ -73,9 +97,7 @@
   }
   // .hero__txt
   &__txt {
-    line-height: 1.2;
-    font-weight: 400;
-    @include adaptiveValue("font-size", 22, 18,0,1920,480.98);
+    font-weight: 500;
     &:not(:last-child) {
       margin-bottom: toRem(20);
     }
@@ -83,6 +105,23 @@
       max-width: 80%;
     }
   }
+	// .hero__list
+	&__list {
+  }
+	// .hero__item
+	&__item {
+    background-image: url("../img/icon/check_circle.svg");
+    background-repeat: no-repeat;
+    background-size: toRem(22);
+    background-position:left;
+    padding-left: toRem(30);
+    p {
+      display: inline-block;
+    }
+    &:not(:last-child) {
+      margin-bottom: toRem(4);
+    }
+	}
   // .hero__buttons
   &__buttons {
     display: grid;
@@ -106,6 +145,7 @@
 
 // === ABOUT SECTION ===========================
 .services {
+  background-color: $lightgray;
   @extend %sectionPtPb;
   // .services__container
   &__container {
