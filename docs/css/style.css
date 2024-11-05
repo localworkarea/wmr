@@ -833,6 +833,9 @@ body {
 .reviews__title {
   color: #fff
 }
+.reviews__title span {
+  color: #e9b44d
+}
 .reviews__subtitle {
   color: #fff
 }
