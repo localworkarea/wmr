@@ -42,16 +42,16 @@
 									</li>
 									<li class="hero__item">
 										<p>
-											місто <b>Сміла</b>
+											місто <b><span>Сміла</span></b>
 										</p>
 									</li>
 								</ul>
 							</div>
 							<div class="hero__buttons">
-								<a href="#" class="hero__btn btn btn_two" aria-label="замовити послугу">
+								<a href="#" data-goto-header data-goto=".order" class="hero__btn btn btn_two" aria-label="замовити послугу">
 									Замовити майстра
 								</a>
-								<a href="#" class="hero__btn btn btn_three" aria-label="зателефонувати">
+								<a href="#" data-goto-header data-goto=".order" class="hero__btn btn btn_three" aria-label="зателефонувати">
 									Отримати консультацію
 								</a>
 							</div>
@@ -107,7 +107,7 @@
 							</li>
 						</ul>
 						<div class="services__button">
-							<a href="#" class="services__link btn btn_two" aria-label="прокручування до блоку послуг з прайсом">
+							<a href="#" data-goto-header data-goto=".price" class="services__link btn btn_two" aria-label="прокручування до блоку послуг з прайсом">
 								Всі послуги
 							</a>
 						</div>
@@ -115,7 +115,7 @@
 				</section>
 				<section class="why">
 					<div class="why__container">
-						<h2 class="why__title title-main">
+						<h2 class="why__title title-main title-mark">
 							Чому <span>обирають нас</span>
 						</h2>
 						<ul class="why__list">
@@ -123,7 +123,7 @@
 								⚡️Великий досвід роботи
 							</li>
 							<li class="why__item">
-								⚡️Висока якість робіт
+								⚡️Висока якість
 							</li>
 							<li class="why__item">
 								⚡️Гарантія від 3-12 міс.
@@ -140,14 +140,650 @@
 						</ul>
 					</div>
 				</section>
+				<section class="process">
+					<div class="process__container">
+						<h2 class="process__title title-main">
+							Як <span>замовити</span> огляд або ремонт
+						</h2>
+						<p class="process__txt txt-sub">
+							З нами ви можете легко викликати професійного спеціаліста на огляд, ремонт чи обслуговування пральної машинки. Для цього дотримуйтесь наступних кроків:
+						</p>
+						<ul class="process__list">
+							<li class="process__item">
+								<div class="process__block">
+									<img src="@img/icon/outgoing_mail.svg" width="24" height="24" alt="icon mail">
+									<ul>
+										<li>
+											Залиште заявку через наш сайт
+										</li>
+										<li>
+											або зателефонуйте за вказаним номером
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="process__item">
+								<div class="process__block">
+									<img src="@img/icon/support_agent.svg" width="24" height="24" alt="icon manager">
+									<p>
+										З вами зв'яжеться наш менеджер, щоб погодити зручний час огляду
+									</p>
+								</div>
+							</li>
+							<li class="process__item">
+								<div class="process__block">
+									<img src="@img/icon/engineering.svg" width="24" height="24" alt="icon worker">
+									<p>
+										Mайстер приїде у зазанчений день та час
+									</p>
+								</div>
+							</li>
+							<li class="process__item">
+								<div class="process__block">
+									<img src="@img/icon/description.svg" width="24" height="24" alt="icon list of proposal">
+									<p>
+										Якщо поломку не можна усунути відразу, вам буде запропановано варіанти рішення
+									</p>
+								</div>
+							</li>
+							<li class="process__item">
+								<div class="process__block">
+									<img src="@img/icon/add_reaction.svg" width="24" height="24" alt="icon happy smile">
+									<p>
+										Після успішного ремонту ви продовжите користуватись технікою
+									</p>
+								</div>
+							</li>
+						</ul>
+						<a href="#" data-goto-header data-goto=".order" class="process__link btn btn_three" aria-label="переход на заявку">
+							Залишити заявку
+						</a>
+					</div>
+				</section>
+				<section class="type">
+					<div class="type__container">
+						<h2 class="type__title title-main title-mark">
+							<span>Типи</span> пральних машин, які ми ремонтуємо
+						</h2>
+						<ul class="type__list">
+							<li class="type__item">
+								<div class="type__img">
+									<picture>
+										<source srcset="@img/types/vertical-mb.jpg" media="(min-width: 30.061em)" type="image/webp">
+										<source srcset="@img/types/vertical-pc.jpg" media="(max-width: 30.061em)" type="image/webp">
+										<img class="ibg ibg--contain" src="@img/types/vertical-pc.jpg" width="260" height="260" alt="image">
+									</picture>
+								</div>
+								<p class="type__name">
+									Вертикальне завантаження
+								</p>
+							</li>	
+							<li class="type__item">
+								<div class="type__img">
+									<picture>
+										<source srcset="@img/types/front-mb.jpg" media="(min-width: 30.061em)" type="image/webp">
+										<source srcset="@img/types/front-pc.jpg" media="(max-width: 30.061em)" type="image/webp">
+										<img class="ibg ibg--contain" src="@img/types/front-pc.jpg" width="260" height="260" alt="image">
+									</picture>
+								</div>
+								<p class="type__name">
+									Фронтальне завантаження
+								</p>
+							</li>	
+							<li class="type__item">
+								<div class="type__img">
+									<picture>
+										<source srcset="@img/types/dryer-mb.jpg" media="(min-width: 30.061em)" type="image/webp">
+										<source srcset="@img/types/dryer-pc.jpg" media="(max-width: 30.061em)" type="image/webp">
+										<img class="ibg ibg--contain" src="@img/types/dryer-pc.jpg" width="260" height="260" alt="image">
+									</picture>
+								</div>
+								<p class="type__name">
+									Сушильні<br> автомати
+								</p>
+							</li>	
+							<li class="type__item">
+								<div class="type__img">
+									<picture>
+										<source srcset="@img/types/combo-mb.jpg" media="(min-width: 30.061em)" type="image/webp">
+										<source srcset="@img/types/combo-pc.jpg" media="(max-width: 30.061em)" type="image/webp">
+										<img class="ibg ibg--contain" src="@img/types/combo-pc.jpg" width="260" height="260" alt="image">
+									</picture>
+								</div>
+								<p class="type__name">
+									Комбіновані прально-сушильні машини
+								</p>
+							</li>	
+						</ul>
+					</div>
+					
+				</section>
+				<section class="reviews">
+					<div class="tiker__wrapper">
+						<div data-tiker-speed="80" class="tiker tiker-01">
+							<ul class="tiker__list">
+								<li class="tiker__item">
+									<img src="@img/brands/brand-01.png" width="200" height="100" alt="бренд">
+								</li>
+								<li class="tiker__item">
+									<img src="@img/brands/brand-02.png" width="200" height="100" alt="бренд">
+								</li>
+								<li class="tiker__item">
+									<img src="@img/brands/brand-03.png" width="200" height="100" alt="бренд">
+								</li>
+								<li class="tiker__item">
+									<img src="@img/brands/brand-04.png" width="200" height="100" alt="бренд">
+								</li>
+								<li class="tiker__item">
+									<img src="@img/brands/brand-05.png" width="200" height="100" alt="бренд">
+								</li>
+								<li class="tiker__item">
+									<img src="@img/brands/brand-06.png" width="200" height="100" alt="бренд">
+								</li>
+								<li class="tiker__item">
+									<img src="@img/brands/brand-07.png" width="200" height="100" alt="бренд">
+								</li>
+								<li class="tiker__item">
+									<img src="@img/brands/brand-08.png" width="200" height="100" alt="бренд">
+								</li>
+								<li class="tiker__item">
+									<img src="@img/brands/brand-09.png" width="200" height="100" alt="бренд">
+								</li>
+								<li class="tiker__item">
+									<img src="@img/brands/brand-10.png" width="200" height="100" alt="бренд">
+								</li>
+								<li class="tiker__item">
+									<img src="@img/brands/brand-11.png" width="200" height="100" alt="бренд">
+								</li>
+								<li class="tiker__item">
+									<img src="@img/brands/brand-12.png" width="200" height="100" alt="бренд">
+								</li>
+								<li class="tiker__item">
+									<img src="@img/brands/brand-13.png" width="200" height="100" alt="бренд">
+								</li>
+								<li class="tiker__item">
+									<img src="@img/brands/brand-14.png" width="200" height="100" alt="бренд">
+								</li>
+								<li class="tiker__item">
+									<img src="@img/brands/brand-15.png" width="200" height="100" alt="бренд">
+								</li>
+								<li class="tiker__item">
+									<img src="@img/brands/brand-16.png" width="200" height="100" alt="бренд">
+								</li>
+								<li class="tiker__item">
+									<img src="@img/brands/brand-17.png" width="200" height="100" alt="бренд">
+								</li>
+							</ul>
+						</div>
+						<div data-tiker-speed="80" class="tiker tiker-02">
+							<ul class="tiker__list">
+								<li class="tiker__item">
+									<img src="@img/brands/brand-01.png" width="200" height="100" alt="бренд">
+								</li>
+								<li class="tiker__item">
+									<img src="@img/brands/brand-02.png" width="200" height="100" alt="бренд">
+								</li>
+								<li class="tiker__item">
+									<img src="@img/brands/brand-03.png" width="200" height="100" alt="бренд">
+								</li>
+								<li class="tiker__item">
+									<img src="@img/brands/brand-04.png" width="200" height="100" alt="бренд">
+								</li>
+								<li class="tiker__item">
+									<img src="@img/brands/brand-05.png" width="200" height="100" alt="бренд">
+								</li>
+								<li class="tiker__item">
+									<img src="@img/brands/brand-06.png" width="200" height="100" alt="бренд">
+								</li>
+								<li class="tiker__item">
+									<img src="@img/brands/brand-07.png" width="200" height="100" alt="бренд">
+								</li>
+								<li class="tiker__item">
+									<img src="@img/brands/brand-08.png" width="200" height="100" alt="бренд">
+								</li>
+								<li class="tiker__item">
+									<img src="@img/brands/brand-09.png" width="200" height="100" alt="бренд">
+								</li>
+								<li class="tiker__item">
+									<img src="@img/brands/brand-10.png" width="200" height="100" alt="бренд">
+								</li>
+								<li class="tiker__item">
+									<img src="@img/brands/brand-11.png" width="200" height="100" alt="бренд">
+								</li>
+								<li class="tiker__item">
+									<img src="@img/brands/brand-12.png" width="200" height="100" alt="бренд">
+								</li>
+								<li class="tiker__item">
+									<img src="@img/brands/brand-13.png" width="200" height="100" alt="бренд">
+								</li>
+								<li class="tiker__item">
+									<img src="@img/brands/brand-14.png" width="200" height="100" alt="бренд">
+								</li>
+								<li class="tiker__item">
+									<img src="@img/brands/brand-15.png" width="200" height="100" alt="бренд">
+								</li>
+								<li class="tiker__item">
+									<img src="@img/brands/brand-16.png" width="200" height="100" alt="бренд">
+								</li>
+								<li class="tiker__item">
+									<img src="@img/brands/brand-17.png" width="200" height="100" alt="бренд">
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="reviews__container">
+						<h2 class="reviews__title title-main">
+							Що <span>говорять</span> наші клієнти
+						</h2>
+						<p class="reviews__subtitle txt-sub">
+							Ми завжди стараємось залишити приємне враження після співпраці. Дізнайтесь що говорять про нас наші клієнти.
+						</p>
+						<div class="reviews__body">
+							<div class="reviews__slider swiper">
+								<ul class="reviews__wrapper swiper-wrapper">
+									<li class="reviews__slide slide-reviews swiper-slide">
+										<div class="slide-reviews__body">
+											<div class="slide-reviews__head">
+												<img class="ibg" src="@img/workers/worker.jpg" width="50" height="50" alt="Image">
+												<p class="slide-reviews__name">
+													Ірина Володимирівна
+												</p>
+											</div>
+											<p class="slide-reviews__testimonials">
+												Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut reiciendis asperiores explicabo quos deleniti non facilis error, similique temporibus 
+											</p>
+										</div>
+									</li>
+									<li class="reviews__slide slide-reviews swiper-slide">
+										<div class="slide-reviews__body">
+											<div class="slide-reviews__head">
+												<img class="ibg" src="@img/workers/worker.jpg" width="50" height="50" alt="Image">
+												<p class="slide-reviews__name">
+													Станіслав Малафієв
+												</p>
+											</div>
+											<p class="slide-reviews__testimonials">
+												Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam porro quod dicta eligendi obcaecati repellat et voluptatibus cumque quia. Ipsam asperiores vel aut dolor reiciendis ex minus recusandae culpa unde.
+											</p>
+										</div>
+									</li>
+									<li class="reviews__slide slide-reviews swiper-slide">
+										<div class="slide-reviews__body">
+											<div class="slide-reviews__head">
+												<img class="ibg" src="@img/workers/worker.jpg" width="50" height="50" alt="Image">
+												<p class="slide-reviews__name">
+													Ольга Іванівна
+												</p>
+											</div>
+											<p class="slide-reviews__testimonials">
+												Lorem, ipsum dolor sit amet consectetur
+											</p>
+										</div>
+									</li>
+									<li class="reviews__slide slide-reviews swiper-slide">
+										<div class="slide-reviews__body">
+											<div class="slide-reviews__head">
+												<img class="ibg" src="@img/workers/worker.jpg" width="50" height="50" alt="Image">
+												<p class="slide-reviews__name">
+													Ірина Володимирівна
+												</p>
+											</div>
+											<p class="slide-reviews__testimonials">
+												Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut reiciendis asperiores explicabo quos deleniti non facilis error, similique temporibus Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi magnam autem, distinctio mollitia, 
+											</p>
+										</div>
+									</li>
+									<li class="reviews__slide slide-reviews swiper-slide">
+										<div class="slide-reviews__body">
+											<div class="slide-reviews__head">
+												<img class="ibg" src="@img/workers/worker.jpg" width="50" height="50" alt="Image">
+												<p class="slide-reviews__name">
+													Ольга Іванівна
+												</p>
+											</div>
+											<p class="slide-reviews__testimonials">
+												Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut reiciendis asperiores explicabo quos deleniti non facilis error, similique temporibus 
+											</p>
+										</div>
+									</li>
+									
+								</ul>
+							</div>
+							<button type="button" class="reviews__button swiper-button-prev" aria-label="кнопка перемикання слайдів назад">
+							</button>
+							<button type="button" class="reviews__button swiper-button-next" aria-label="кнопка перемикання слайдів вперед">
+							</button>
+						</div>
+					</div>
+				</section>
+				<section class="price">
+					<div class="price__container">
+						<div class="price__body">
+							<h2 class="price__title title-main">
+								Всі <span>послуги</span>
+							</h2>
+							<div class="price__img">
+								<img class="ibg ibg--contain" src="@img/price.png" width="300" height="374" alt="Image">
+							</div>
+						</div>
+						<div data-showmore="items" class="price__list">
+							<p class="price__subtitle txt-sub">
+								Ціни на всі послуги актуальні та вказані без урахування вартості деталей, яких потребується замінити.
+							</p>
+							<ul data-showmore-content="6" class="price__items">
+								<li class="price__item">
+									<p class="price__name">
+										Підключення пральної машини
+									</p>
+									<p class="price__price">
+										≈ 3500 грн 
+									</p>
+								</li>
+								<li class="price__item">
+									<p class="price__name">
+										Заміна клапана подачі води в пральній машині
+									</p>
+									<p class="price__price">
+										≈ 150 грн
+									</p>
+								</li>
+								<li class="price__item">
+									<p class="price__name">
+										Заміна манжети насоса в пральній машині
+									</p>
+									<p class="price__price">
+										≈ 150 грн
+									</p>
+								</li>
+								<li class="price__item">
+									<p class="price__name">
+										Ремонт модуля пральної машини (плати управління)
+									</p>
+									<p class="price__price">
+										≈ 150 грн
+									</p>
+								</li>
+								<li class="price__item">
+									<p class="price__name">
+										Підключення пральної машини
+									</p>
+									<p class="price__price">
+										≈ 150 грн
+									</p>
+								</li>
+								<li class="price__item">
+									<p class="price__name">
+										Заміна клапана подачі води в пральній машині
+									</p>
+									<p class="price__price">
+										≈ 150 грн
+									</p>
+								</li>
+								<li class="price__item">
+									<p class="price__name">
+										Заміна манжети насоса в пральній машині
+									</p>
+									<p class="price__price">
+										≈ 150 грн
+									</p>
+								</li>
+								<li class="price__item">
+									<p class="price__name">
+										Ремонт модуля пральної машини (плати управління)
+									</p>
+									<p class="price__price">
+										≈ 150 грн
+									</p>
+								</li>
+								<li class="price__item">
+									<p class="price__name">
+										Підключення пральної машини
+									</p>
+									<p class="price__price">
+										≈ 150 грн
+									</p>
+								</li>
+								<li class="price__item">
+									<p class="price__name">
+										Заміна клапана подачі води в пральній машині
+									</p>
+									<p class="price__price">
+										≈ 150 грн
+									</p>
+								</li>
+								<li class="price__item">
+									<p class="price__name">
+										Заміна манжети насоса в пральній машині
+									</p>
+									<p class="price__price">
+										≈ 150 грн
+									</p>
+								</li>
+								<li class="price__item">
+									<p class="price__name">
+										Ремонт модуля пральної машини (плати управління)
+									</p>
+									<p class="price__price">
+										≈ 150 грн
+									</p>
+								</li>
+								<li class="price__item">
+									<p class="price__name">
+										Підключення пральної машини
+									</p>
+									<p class="price__price">
+										≈ 150 грн
+									</p>
+								</li>
+								<li class="price__item">
+									<p class="price__name">
+										Заміна клапана подачі води в пральній машині
+									</p>
+									<p class="price__price">
+										≈ 150 грн
+									</p>
+								</li>
+								<li class="price__item">
+									<p class="price__name">
+										Заміна манжети насоса в пральній машині
+									</p>
+									<p class="price__price">
+										≈ 150 грн
+									</p>
+								</li>
+								<li class="price__item">
+									<p class="price__name">
+										Ремонт модуля пральної машини (плати управління)
+									</p>
+									<p class="price__price">
+										≈ 150 грн
+									</p>
+								</li>
+							</ul>
+							<div class="price__buttons">
+								<button hidden data-showmore-button="300" type="button" class="price__more btn btn_two" aria-label="кнопка розкриття списку на послуги з цінами">
+									<span class="more-showe">Показати всі послуги (<span class="count-services"></span>) ↓</span>
+									<span class="more-hidden">Сховати ↑</span>
+								</button>
+								<a href="#" data-goto-header data-goto=".order" class="price__link btn btn_three" aria-label="посилання на форму замовлення">
+									Замовити послугу
+								</a>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="order">
+					<div class="order__container">
+						<h2 class="order__title title-main title-mark">
+							<span>Замовити</span> майстра
+						</h2>
+						<p class="order__subtitle txt-sub">
+							Залиште вашу заявку і ми зв'яжимося з вами в найближчий час. Опишіть що саме вас цікавить, навіть якщо необхідна просто консультація.
+						</p>
+						<form class="order__form form" data-dev action="#" method="POST">
+							<div class="form__body">
+								<div class="form__item">
+									<label for="formName" class="form__lable">✅ Ваше ім'я</label>
+									<input id="formName" type="text" name="name" placeholder="Iм'я" class="input" data-required data-validate data-error="Обов'язкове поле">
+								</div>
+								<div class="form__item">
+									<label for="formTel" class="form__lable">✅ Ваш номер телефону</label>
+									<input id="formTel" type="tel" name="tel" placeholder="+38 (___) __ __" class="input" data-required data-validate data-error="Обов'язкове поле">
+								</div>
+								<div class="form__item">
+									<label for="formMsg" class="form__lable">✅ Напишіть в чому ваша потреба</label>
+									<textarea id="formMsg" name="message" placeholder="Текстове повідомлення..." class=" form__msg input" maxlength="300"></textarea>
+								</div>
+								<button type="submit" class="form__button btn btn_two" aria-label="submit form button">Замовити</button>
+							</div>
+							<div class="form__sucsess success">
+								<button type="button" class="success__close" aria-label="кнопка закрытия попапа">
+									<svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path  d="M1.73333 1.48883L21.5469 21.0288" stroke="#979797" stroke-linecap="square" />
+										<path  d="M21.2667 1.48883L1.45309 21.0288" stroke="#979797" stroke-linecap="square" />
+									</svg>
+								</button>
+								<p class="success__title">
+									Дякуємо!
+								</p>
+								<p class="success__subtitle txt-sub">
+									Ваша <span>заявка прийнята</span>. Ми зв'яжемося з вами найближчим часом.
+								</p>
+							</div>
+						</form>
+					</div>
+				</section>
+				<section class="faq">
+					<div class="faq__container">
+						<h2 class="faq__title title-main">
+							Часті <span>питання та відповіді</span>
+						</h2>
+						<div class="faq__body">
+							<div data-spollers data-spollers-speed="300" class="spollers">
+								<details class="spollers__item">
+									<summary class="spollers__head">Скільки коштує виїзд майстра</summary>
+									<div class="spollers__body">
+										<p>
+											Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ipsam ex aliquam asperiores, nemo eius voluptatem, pariatur necessitatibus vitae optio aperiam odit temporibus labore, quod sapiente id inventore ut! Modi?
+										</p>
+									</div>
+								</details>
+								<details class="spollers__item">
+									<summary class="spollers__head">Скільки коштує виїзд майстра</summary>
+									<div class="spollers__body">
+										<p>
+											Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ipsam ex aliquam asperiores, nemo eius voluptatem, pariatur necessitatibus vitae optio aperiam odit temporibus labore, quod sapiente id inventore ut! Modi?
+										</p>
+									</div>
+								</details>
+								<details class="spollers__item">
+									<summary class="spollers__head">Скільки коштує виїзд майстра</summary>
+									<div class="spollers__body">
+										<p>
+											Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ipsam ex aliquam asperiores, nemo eius voluptatem, pariatur necessitatibus vitae optio aperiam odit temporibus labore, quod sapiente id inventore ut! Modi?
+										</p>
+									</div>
+								</details>
+								<details class="spollers__item">
+									<summary class="spollers__head">Скільки коштує виїзд майстра</summary>
+									<div class="spollers__body">
+										<p>
+											Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ipsam ex aliquam asperiores, nemo eius voluptatem, pariatur necessitatibus vitae optio aperiam odit temporibus labore, quod sapiente id inventore ut! Modi?
+										</p>
+									</div>
+								</details>
+								<details class="spollers__item">
+									<summary class="spollers__head">Скільки коштує виїзд майстра</summary>
+									<div class="spollers__body">
+										<p>
+											Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ipsam ex aliquam asperiores, nemo eius voluptatem, pariatur necessitatibus vitae optio aperiam odit temporibus labore, quod sapiente id inventore ut! Modi?
+										</p>
+									</div>
+								</details>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="contacts">
+					<div class="contacts__container">
+						<h2 class="contacts__tilte title-main">
+							Контакти
+						</h2>
+						<div class="contacts__body">
+							<div class="contacts__map">
+								<iframe class="ibg" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d83405.16991915113!2d31.803669074074033!3d49.21172147131496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d140616c4c4401%3A0x87baa02ce135bf2c!2sSmila%2C%20Cherkasy%20Oblast%2C%2020700!5e0!3m2!1sen!2sua!4v1730726338568!5m2!1sen!2sua" width="600" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+							</div>
+							<div class="contacts__info">
+								<div class="contacts__txt txt-sub">
+									<p>
+										Ми працюємо по місту Сміла та прилеглим районам. Щоб замовити ремонт чи обслуговування вашої пральної машинки ви можете:
+									</p>
+									<ul class="contacts__list">
+										<li>
+											<p>
+												залишити заявку через сайт
+											</p>
+										</li>
+										 <li>
+											<p>
+												зателефонувати за вказаним номером телефону
+											</p>
+										 </li>
+										 <li>
+											<p>
+												або написавши нам через наші соціальні мережі
+											</p>
+										 </li>
+									</ul>
+								</div>
+								<address class="contacts__address">
+									<a href="tel:+123456789" class="contacts__link" aria-label="номер телефону">+38 (093) 123 45 67</a>
+									<a href="https://maps.app.goo.gl/S5ba7nvvoPJKSMig7" class="contacts__link" aria-label="гугл карти">м.Сміла</a>
+									<div class="contacts__socials">
+										<a href="#" class="contacts__social social-btn" aria-label="написати в телеграм">
+											<svg width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M14.3144 30.0108C23.3515 26.0734 29.3777 23.4777 32.3929 22.2236C41.0019 18.6428 42.7908 18.0208 43.9568 18.0002C44.2132 17.9957 44.7866 18.0593 45.158 18.3606C45.4716 18.6151 45.5579 18.9589 45.5992 19.2002C45.6405 19.4414 45.6919 19.9911 45.651 20.4205C45.1845 25.3223 43.1659 37.2178 42.1389 42.7079C41.7043 45.031 40.8487 45.8099 40.0203 45.8861C38.2201 46.0518 36.8531 44.6964 35.1095 43.5535C32.3811 41.765 30.8397 40.6516 28.1913 38.9064C25.1306 36.8894 27.1147 35.7809 28.859 33.9692C29.3155 33.4951 37.2473 26.2805 37.4009 25.626C37.4201 25.5442 37.4379 25.239 37.2566 25.0779C37.0754 24.9168 36.8078 24.9719 36.6148 25.0157C36.3411 25.0778 31.9825 27.9588 23.5388 33.6585C22.3016 34.508 21.181 34.9219 20.177 34.9003C19.0701 34.8763 16.941 34.2744 15.3581 33.7599C13.4168 33.1288 11.8738 32.7952 12.0082 31.7235C12.0781 31.1652 12.8469 30.5943 14.3144 30.0108Z" fill="#121212"/>
+											</svg>
+										</a>
+										<a href="#" class="contacts__social social-btn" aria-label="написати у вайбер">
+											<svg width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M47.0436 22.2011C46.43 19.9518 45.2165 18.1711 43.4359 16.9116C41.1889 15.3205 38.6043 14.7563 36.3722 14.414C33.2836 13.9407 30.486 13.8744 27.8219 14.209C25.3228 14.5235 23.4418 15.0261 21.7242 15.837C18.3596 17.4249 16.3405 19.9965 15.724 23.4776C15.424 25.1673 15.223 26.6952 15.106 28.1521C14.836 31.5207 15.0805 34.5023 15.8545 37.265C16.6076 39.9584 17.9246 41.884 19.8807 43.1481C20.3802 43.4704 21.0162 43.7032 21.6342 43.9282C21.9432 44.0408 22.2402 44.1518 22.4997 44.269V49.7111C22.4997 50.4234 23.0608 51 23.7538 51C24.0808 51 24.3943 50.869 24.6283 50.6346L29.514 45.7505C29.727 45.5008 29.727 45.5008 29.946 45.4961C31.6156 45.4622 33.3211 45.3959 35.0162 45.3019C37.0697 45.1863 39.4488 44.9828 41.6899 44.0223C43.7405 43.142 45.2375 41.7452 46.136 39.872C47.0736 37.9172 47.6316 35.7989 47.8401 33.3985C48.2061 29.1773 47.9451 25.5142 47.0436 22.2011ZM38.5368 38.2656C38.0463 39.0904 37.3112 39.6608 36.4472 40.0308C35.8157 40.3022 35.1707 40.2451 34.5482 39.9738C29.322 37.7013 25.2253 34.1184 22.5162 28.9707C21.9582 27.91 21.5697 26.7553 21.1242 25.6345C21.0327 25.4032 21.0402 25.1334 20.9997 24.8821C21.0387 23.0706 22.3902 22.0516 23.7553 21.7432C24.2773 21.6245 24.7393 21.8142 25.1263 22.195C26.1974 23.2464 27.0449 24.4643 27.6824 25.8303C27.9614 26.43 27.8354 26.9603 27.3599 27.4059C27.2624 27.4984 27.1589 27.5847 27.0524 27.6664C25.9679 28.5051 25.8089 29.1388 26.3864 30.4014C27.3704 32.549 29.004 33.9905 31.1175 34.8847C31.6741 35.1205 32.1991 35.0034 32.6251 34.5393C32.6821 34.4776 32.7466 34.4175 32.7886 34.3466C33.6226 32.9174 34.8302 33.0593 35.9462 33.8748C36.6797 34.4098 37.3907 34.9741 38.1168 35.5198C39.2178 36.3539 39.2088 37.1371 38.5368 38.2656ZM32.2666 23.4699C31.9861 23.4699 31.7041 23.4931 31.428 23.5409C30.96 23.6226 30.519 23.2973 30.441 22.8163C30.363 22.3368 30.678 21.882 31.146 21.8018C31.5136 21.7402 31.8916 21.7078 32.2666 21.7078C35.9792 21.7078 39.0003 24.8128 39.0003 28.6285C39.0003 29.0154 38.9688 29.4039 38.9073 29.7816C38.8368 30.2118 38.4738 30.517 38.0628 30.517C38.0163 30.517 37.9683 30.5139 37.9203 30.5047C37.4537 30.423 37.1387 29.9697 37.2167 29.4903C37.2632 29.2097 37.2857 28.9198 37.2857 28.63C37.2857 25.784 35.0342 23.4699 32.2666 23.4699ZM36.0002 29.1958C36.0002 29.6814 35.6162 30.0761 35.1437 30.0761C34.6712 30.0761 34.2871 29.6814 34.2871 29.1958C34.2871 27.7389 33.1336 26.5533 31.7161 26.5533C31.2435 26.5533 30.8595 26.1587 30.8595 25.673C30.8595 25.1874 31.2435 24.7927 31.7161 24.7927C34.0771 24.7912 36.0002 26.7676 36.0002 29.1958ZM41.7694 30.2704C41.6794 30.6804 41.3269 30.9564 40.9339 30.9564C40.8709 30.9564 40.8064 30.9487 40.7434 30.9348C40.2813 30.8269 39.9918 30.3551 40.0968 29.8818C40.2213 29.3191 40.2843 28.7379 40.2843 28.1551C40.2843 23.8723 36.8942 20.3865 32.7256 20.3865C32.1571 20.3865 31.5931 20.4513 31.0455 20.5793C30.5865 20.6887 30.1245 20.3896 30.021 19.9148C29.916 19.4399 30.2055 18.9682 30.6675 18.8618C31.3395 18.703 32.0326 18.6244 32.7286 18.6244C37.8408 18.6244 42.0004 22.8995 42.0004 28.1536C42.0004 28.869 41.9224 29.5812 41.7694 30.2704Z" fill="#121212"/>
+												</svg>
+										</a>
+									</div>
+								</address>
+							</div>
+						</div>
+					</div>
+				
+				</section>
 				<section class="about">
 					<div class="about__container">
 						<h2 class="about__title title-main">
 							Про <span>нас</span>
 						</h2>
-						<p class="about__txt">
-							Ми професійно займаємося ремонтом пральних машин багато років, пропонуючи якісні послуги з відновлення вашої техніки. Спеціалізуємося виключно на ремонті пральних машин, що робить нас експертами у своїй справі. Наш підхід спрямований на використання лише оригінальних запчастин, що гарантує довговічність та надійність роботи. Кожна виконана нами робота супроводжується гарантією, що підкреслює наше прагнення до якості та турботи про клієнтів. Незалежно від складності поломки, ми завжди знаходимо оптимальне рішення, повертаючи вашу пральну машину до життя швидко та ефективно.
-						</p>
+						<div class="about__body">
+							<div class="about__img">
+								<img loading="lazy" class="ibg" src="@img/workers/worker.jpg" width="400" height="400" alt="засновник компанії Артем">
+							</div>
+							<div class="about__texts">
+								<blockquote class="about__quote">
+									<p class="about__txt">
+										Ми професійно займаємося ремонтом пральних машин багато років, пропонуючи якісні послуги з відновлення вашої техніки. Спеціалізуємося виключно на ремонті пральних машин, що робить нас експертами у своїй справі.
+									</p>
+									<p class="about__txt">
+										Наш підхід спрямований на використання лише оригінальних запчастин, що гарантує довговічність та надійність роботи. Кожна виконана нами робота супроводжується гарантією, що підкреслює наше прагнення до якості та турботи про клієнтів.
+									</p>
+									<p class="about__txt">
+										Незалежно від складності поломки, ми завжди знаходимо оптимальне рішення, повертаючи вашу пральну машину до життя швидко та ефективно.
+									</p>
+								</blockquote>
+								<div class="about__founder">
+									<p class="about__name">Артем Щетінкін</p>
+									<p class="about__position">Засновник компанії</p>
+								</div>
+							</div>
+						</div>
 					</div>
 				</section>
 			</main>

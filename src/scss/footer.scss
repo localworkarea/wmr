@@ -1,3 +1,120 @@
-//====================================================================================================
+.footer {
+  @extend %sectionPtPb;
+  background-color: $mainColor;
+  color: #fff;
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position: center;
+  position: relative;
+  @media (min-width:$mobileSmall){
+    background-image: url("../img/why-bg-pc.jpg");
+  }
+  @media (max-width:$mobileSmall){
+    background-image: url("../img/why-bg-mb.jpg");
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    inset: 0;
+    background-color: rgba(0,0,0,0.6);
+  }
+  // .footer__container
+  &__container {
+    position: relative;
+    z-index: 2;
+  }
+  // .footer__top
+  &__top {
+    display: grid;
+    gap: toRem(40) toRem(20);
+    padding-bottom: toRem(40);
+    @media (min-width:toEm(600.98)){
+      grid-template-columns: repeat(3,1fr);
+    }
+    @media (max-width: toEm(600.98)){
+      grid-template-columns: repeat(2,1fr);      
+    }
+  }
+  // .footer__logo
+  &__logo {
+    img {
+      height: auto;
+      width: 100%;
+      @include adaptiveValue("max-width", 200, 130,0,1920,480.98);
+    }
+  }
+  // .footer__nav
+  &__nav {
+    @media (min-width:toEm(600.98)){
+      justify-self: center;
+    }
+    @media (max-width:toEm(600.98)){
+        
+    }
+  }
+  // .footer__list
+  &__list {
+  }
+  // .footer__item
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: toRem(15);
+    }
+  }
+  // .footer__link
+  &__link {
+    font-weight: 500;
+    font-size: toRem(22);
+    transition: color .3s ease;
+      @media (any-hover: hover){
+        &:hover{
+          color: $green;
+        }
+      }
+  }
+  // .footer__contacts
+  &__contacts {
+    @media (min-width:toEm(600.98)){
+      justify-self: flex-end;
+    }
+    @media (max-width: toEm(600.98)){
+      grid-column: 2/3;
+    }
+  }
+  // .footer__bottom
+  &__bottom {
+    padding-top: toRem(40);
+    border-top: toRem(1) solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: toRem(20);
+  }
+  // .footer__btm
+  &__btm {
+    &.link {
+      transition: color .3s ease;
+      @media (any-hover: hover){
+        &:hover{
+          color: $green;
+        }
+      }
+    }
+  }
+}
 
-//====================================================================================================
+.contacts-footer {
+  // .contacts-footer__list
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: toRem(10);
+  }
+  // .contacts-footer__item
+  &__item {
+  }
+  // .contacts-footer__link
+  &__link {
+  }
+}

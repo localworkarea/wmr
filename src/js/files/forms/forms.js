@@ -233,6 +233,9 @@ export function formSubmit() {
 				popup ? flsModules.popup.open(popup) : null;
 			}
 		}, 0);
+
+		form.classList.add('_sent-success');
+
 		// Очищуємо форму
 		formValidate.formClean(form);
 		// Повідомляємо до консолі

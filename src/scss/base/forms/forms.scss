@@ -1,20 +1,170 @@
-//<FORM>
-// Сніппет (HTML):
-.form {
-	&__row {
+//<INPUT>
+// Сніппет (HTML): inp
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+.input {
+	border-radius: toRem(10);
+	width: 100%;
+	display: block;
+	padding: 0px 20px;
+	border: toRem(1) solid $mainColor;
+	caret-color: inherit;
+	background-color: #fff;
+	min-height: toRem(50);
+	font-size: toRem(18);
+	&._form-focus {
+		border-color: $green;
+		outline-color: $green;
 	}
-	&__column {
-	}
-	&__line {
-	}
-	&__input {
-	}
-	&__button {
-	}
-	&__error {
+	&._form-error {
+		border-color: $red;
+		&::placeholder {
+			color: $red;
+		}
 	}
 }
-//</FORM>
+.input[placeholder]:not([data-placeholder-nohiden]) {
+	&::placeholder {
+		transition: opacity 0.3s;
+	}
+	&::placeholder {
+		// color: rgb(128, 128, 128, 0.7);
+	}
+	&:focus::placeholder {
+		opacity: 0;
+	}
+}
+
+textarea.input {
+	resize: none;
+	padding: toRem(20);
+	min-height: toRem(120);
+}
+
+.form {
+  background-color: $lightgray;
+  border: toRem(1) solid $mainColor;
+  border-radius: toRem(20);
+  padding: toRem(20);
+	position: relative;
+	&._sending {
+		.form__button {
+			pointer-events: none;
+			opacity: 0.5;
+		}
+	}
+	&._sent-success {
+
+	}
+	.form__error {
+		position: absolute;
+		bottom: toRem(5);
+		right: toRem(5);
+		color: $red;
+	}
+	// .form__body
+	&__body {
+		._sent-success & {
+			opacity: 0;
+			pointer-events: none;
+		}
+	}
+  // .form__item
+  &__item {
+    margin-bottom: toRem(20);
+		position: relative;
+  }
+	// .form__lable
+	&__lable {
+		font-weight: 500;
+    font-size: toRem(18);
+		margin-bottom: toRem(10);
+	}
+  // .form__msg
+  &__msg {
+  }
+  // .form__button
+  &__button {
+		width: 100%;
+		@media (min-width:toEm(700.98)){
+			max-width: toRem(400);
+			margin-inline: auto;
+		}
+  }
+	// .form__sucsess
+	&__sucsess {
+	}
+}
+
+.success {
+	position: absolute;
+	z-index: 2;
+	inset: 0;
+	padding: toRem(20);
+	opacity: 0;
+	pointer-events: none;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	._sent-success & {
+		opacity: 1;
+		pointer-events: all;
+	}
+	// .success__close
+	&__close {
+		position: absolute;
+		top: toRem(20);
+		right: toRem(20);
+		border-radius: toRem(6);
+		background-color: rgba(0, 0, 0, 0.8);
+		display: grid;
+		place-items: center;
+		padding: toRem(5);
+		svg {
+			path {
+				stroke: #fff;
+			}
+		}
+	}
+	// .success__title
+	&__title {
+		position: relative;
+		font-weight: 700;
+		margin-bottom: toRem(20);
+		@include adaptiveValue("font-size", 50, 30,0,1920,480.98);
+		&:before {
+			content: "";
+			position: absolute;
+			top: toRem(-20);
+			left: 50%;
+			transform: translate(-50%,-100%);
+			background-image: url("../img/icon/check_circle.svg");
+			background-repeat: no-repeat;
+			background-size: contain;
+			width: toRem(80);
+			aspect-ratio: 1/1;
+		}
+	}
+	// .success__subtitle
+	&__subtitle {
+		span {
+			color: $green;
+		}
+	}
+}
+
+	
+
+
+
 
 // <BUTTONS>
 // Сніппет (HTML): btn

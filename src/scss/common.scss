@@ -85,6 +85,28 @@ body {
   span {
     color: $green;
   }
+  &.title-mark {
+    line-height: 1.2;
+    span {
+      color: $mainColor;
+      display: inline-block;
+      background-color: $yellow;
+      border-radius: toRem(8);
+      padding: toRem(5) toRem(10);
+    }
+  }
+}
+
+.txt-sub {
+  line-height: 1.2;
+  font-weight: 500;
+  @include adaptiveValue("font-size", 22, 16,0,1920,480.98);
+  &:not(:last-child) {
+    @extend %marBottom40-20;
+  }
+  @media (min-width:$mobileSmall){
+    max-width: 60%;
+  }
 }
 
 
@@ -93,7 +115,105 @@ body {
   @include adaptiveValue("padding-bottom", 100,40,0,1920,480.98);
 }
 
+%sectionPb {
+  @include adaptiveValue("padding-bottom", 100,40,0,1920,480.98);
+}
 
 %marBottom40-20 {
   @include adaptiveValue("margin-bottom", 40, 20,0,1920,480);
+}
+
+
+.tiker {
+  overflow: hidden;
+  width: max-content;
+  overflow: visible;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 5;
+  &:not(:last-child) {
+    margin-bottom: toRem(10);
+  }
+  // .tiker__wrapper
+  &__wrapper {
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 100,40,0,1920,480.98);
+    }
+  }
+  &.tiker-01 {}
+  &.tiker-02 {}
+  // .tiker__list
+  &__list {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  // .tiker__item
+  &__item {
+    border-radius: toRem(10);
+    background-color: rgba(255,255,255,1);
+    margin-right: toRem(10);
+    @include adaptiveValue("max-width", 180, 100,0,1920.98,480.98);
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+@keyframes scroll {
+  to {
+    transform: translateX(-100%) ;
+  }
+}
+@keyframes scroll-rev {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+
+[data-showmore] {
+}
+[data-showmore-content] {
+}
+[data-showmore-button] {
+  .more-showe {
+    
+    ._showmore-active & {
+      display: none;
+    }
+  }
+  .more-hidden {
+    display: none;
+    ._showmore-active & {
+      display: block;
+    }
+  }
+}
+
+
+.social-btn {
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  border: toRem(1) solid $mainColor;
+  background-color: #fff;
+  transition: background-color .3s ease;
+  svg {
+    path {
+      transition: fill .3s ease;
+    }
+  }
+  @media (any-hover: hover){
+    &:hover{
+      background-color: $green;
+      path {
+        fill: #fff;
+      }
+    }
+  }
 }
