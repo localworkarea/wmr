@@ -561,16 +561,15 @@ body {
   position: relative;
   min-height: 100svh;
   display: flex;
-  flex-direction: column
+  flex-direction: column;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center
 }
-.hero__bg {
-  position: absolute;
-  z-index: -1;
-  inset: 0
-}
-.hero__bg::before {
+.hero::before {
   content: "";
   position: absolute;
+  z-index: 1;
   inset: 0
 }
 .hero__container {
@@ -980,7 +979,6 @@ body {
   background-size: contain;
   width: 1.875rem;
   aspect-ratio: 1/1;
-  justify-self: center;
   transition: -webkit-transform .3s ease;
   transition: transform .3s ease;
   transition: transform .3s ease,-webkit-transform .3s ease;
@@ -1005,7 +1003,7 @@ body {
   gap: 2.5rem
 }
 .contacts__txt {
-  max-width: 100%
+  max-width: 100%!important
 }
 .contacts__txt p {
   margin-bottom: 1.25rem
@@ -1089,7 +1087,10 @@ body {
   .footer {
     background-image: url(../img/why-bg-pc.webp)
   }
-  .hero__bg::before {
+  .hero {
+    background-image: url(../img/hero-pc2.webp)
+  }
+  .hero::before {
     background-image: linear-gradient(90deg,#000 10%,rgba(0,0,0,0) 100%)
   }
   .hero__container {
@@ -1151,6 +1152,9 @@ body {
     grid-template-columns: 1fr 8.125rem;
     gap: 1.25rem;
     padding: 1.25rem 0
+  }
+  .spollers__head::after {
+    justify-self: center
   }
 }
 @media (min-width:37.56125em) {
@@ -1615,6 +1619,12 @@ body {
     max-width: 8.125rem
   }
   .hero {
+    background-image: url(../img/hero-mb2.webp)
+  }
+  .hero::before {
+    background-color: rgba(0,0,0,.6)
+  }
+  .hero {
     padding-top: 4.375rem
   }
   .hero {
@@ -1622,9 +1632,6 @@ body {
   }
   .hero {
     justify-content: flex-end
-  }
-  .hero__bg::before {
-    background-color: rgba(0,0,0,.6)
   }
   .hero__top {
     font-size: 1rem
@@ -1727,6 +1734,9 @@ body {
   }
   .price__buttons {
     margin-top: 1.25rem
+  }
+  .spollers__head::after {
+    justify-self: flex-end
   }
   .contacts__link {
     font-size: 1.625rem

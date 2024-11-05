@@ -3,6 +3,28 @@
   min-height: 100svh;
   display: flex;
   flex-direction: column;
+
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position: center;
+  @media (min-width:$mobileSmall){
+    background-image: url("../img/hero-pc2.jpg");
+  }
+  @media (max-width:$mobileSmall){
+    background-image: url("../img/hero-mb2.jpg");
+  }
+  &::before {
+    content:'';
+    position: absolute;
+    z-index: 1;
+    inset: 0;
+    @media (min-width:$mobileSmall){
+      background-image: linear-gradient(90deg, #000 10%, rgba(0, 0, 0, 0) 100%);
+    }
+    @media (max-width:$mobileSmall){
+      background-color: rgba(0,0,0,0.6);
+    }
+  }
   @include adaptiveValue("padding-top", 150, 70,0,1440,480.98);
   @include adaptiveValue("padding-bottom", 60,40,0,1920,480.98);
   @media (min-width:toEm(820.98)){
@@ -14,39 +36,6 @@
   @media (max-width:$mobileSmall){
     justify-content: flex-end;
   }
-	// .hero__bg
-	&__bg {
-    // @media (min-width:toEm(820.98)){
-      position: absolute;
-      z-index: -1;
-      // top: 50%;
-      // transform: translate(0, -50%);
-      // right: 0;
-      // width: 50%;
-    // }
-    // @media (max-width: toEm(820.98)) and (min-width: $mobileSmall){
-    //   position: relative;
-    //   width: 70%;        
-    //   left: 50%;
-    //   transform: translate(-50%,0);
-    //   margin-bottom: toRem(50);
-    // }
-    // @media (max-width: $mobileSmall){
-        // position: absolute;
-        inset: 0;
-        &::before {
-          content:'';
-          position: absolute;
-          inset: 0;
-          @media (min-width:$mobileSmall){
-            background-image: linear-gradient(90deg, #000 10%, rgba(0, 0, 0, 0) 100%);
-          }
-          @media (max-width:$mobileSmall){
-            background-color: rgba(0,0,0,0.6);
-          }
-        }
-    // }
-	}
   // .hero__container
   &__container {
     position: relative;
@@ -870,9 +859,14 @@
       background-size: contain;
       width: toRem(30);
       aspect-ratio: 1/1;
-      justify-self: center;
       transition: transform .3s ease;
       transform-origin: 50% 50%;
+      @media (min-width:$mobileSmall){
+        justify-self: center;
+      }
+      @media (max-width:$mobileSmall){
+         justify-self: flex-end; 
+      }
     }
   }
   // .spollers__body
@@ -886,7 +880,6 @@
     }
   }
 }
-
 
 // === TYPE SECTION ===========================
 .contacts {
@@ -944,7 +937,7 @@
   }
   // .contacts__txt
   &__txt {
-    max-width: 100%;
+    max-width: 100% !important;
     p {
       margin-bottom: toRem(20);
     }

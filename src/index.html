@@ -8,13 +8,6 @@
 			@@include('html/_header.htm',{})
 			<main class="page">
 				<section class="hero">
-					<div class="hero__bg">
-						<picture>
-							<source srcset="@img/hero-pc2.jpg" media="(min-width: 30.061em)" type="image/webp">
-							<source srcset="@img/hero-mb2.jpg" media="(max-width: 30.061em)" type="image/webp">
-							<img class="ibg" src="@img/hero-pc.png" width="725" height="403" alt="два професійні майстри ремонтують пральну машинку">
-						</picture>
-					</div>
 					<div class="hero__container">
 						<div class="hero__body">
 							<div class="hero__top">
@@ -211,7 +204,7 @@
 									<picture>
 										<source srcset="@img/types/vertical-mb.jpg" media="(min-width: 30.061em)" type="image/webp">
 										<source srcset="@img/types/vertical-pc.jpg" media="(max-width: 30.061em)" type="image/webp">
-										<img class="ibg ibg--contain" src="@img/types/vertical-pc.jpg" width="260" height="260" alt="image">
+										<img loading="lazy" class="ibg ibg--contain" src="@img/types/vertical-pc.jpg" width="260" height="260" alt="image">
 									</picture>
 								</div>
 								<p class="type__name">
@@ -223,7 +216,7 @@
 									<picture>
 										<source srcset="@img/types/front-mb.jpg" media="(min-width: 30.061em)" type="image/webp">
 										<source srcset="@img/types/front-pc.jpg" media="(max-width: 30.061em)" type="image/webp">
-										<img class="ibg ibg--contain" src="@img/types/front-pc.jpg" width="260" height="260" alt="image">
+										<img loading="lazy" class="ibg ibg--contain" src="@img/types/front-pc.jpg" width="260" height="260" alt="image">
 									</picture>
 								</div>
 								<p class="type__name">
@@ -235,7 +228,7 @@
 									<picture>
 										<source srcset="@img/types/dryer-mb.jpg" media="(min-width: 30.061em)" type="image/webp">
 										<source srcset="@img/types/dryer-pc.jpg" media="(max-width: 30.061em)" type="image/webp">
-										<img class="ibg ibg--contain" src="@img/types/dryer-pc.jpg" width="260" height="260" alt="image">
+										<img loading="lazy" class="ibg ibg--contain" src="@img/types/dryer-pc.jpg" width="260" height="260" alt="image">
 									</picture>
 								</div>
 								<p class="type__name">
@@ -247,7 +240,7 @@
 									<picture>
 										<source srcset="@img/types/combo-mb.jpg" media="(min-width: 30.061em)" type="image/webp">
 										<source srcset="@img/types/combo-pc.jpg" media="(max-width: 30.061em)" type="image/webp">
-										<img class="ibg ibg--contain" src="@img/types/combo-pc.jpg" width="260" height="260" alt="image">
+										<img loading="lazy" class="ibg ibg--contain" src="@img/types/combo-pc.jpg" width="260" height="260" alt="image">
 									</picture>
 								</div>
 								<p class="type__name">
@@ -463,7 +456,7 @@
 								Всі <span>послуги</span>
 							</h2>
 							<div class="price__img">
-								<img class="ibg ibg--contain" src="@img/price.png" width="300" height="374" alt="Image">
+								<img loading="lazy" class="ibg ibg--contain" src="@img/price.png" width="300" height="374" alt="Image">
 							</div>
 						</div>
 						<div data-showmore="items" class="price__list">
@@ -656,7 +649,7 @@
 				<section class="faq">
 					<div class="faq__container">
 						<h2 class="faq__title title-main title-mark">
-							Часті <span>питання та відповіді</span>
+							Часті <span>питання</span> та <span>відповіді</span>
 						</h2>
 						<div class="faq__body">
 							<div data-spollers data-spollers-speed="300" class="spollers">
