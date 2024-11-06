@@ -6,7 +6,6 @@
   @include adaptiveValue("max-width", 1300, 1200,0,1920,1440);
 }
 body {
-  // background-color: $lightgray;
   background-color: #fff;
 }
 * {
@@ -93,6 +92,7 @@ body {
       background-color: $yellow;
       border-radius: toRem(8);
       padding: toRem(5) toRem(10);
+      margin-bottom: toRem(5);
     }
   }
 }
@@ -100,7 +100,7 @@ body {
 .txt-sub {
   line-height: 1.2;
   font-weight: 500;
-  @include adaptiveValue("font-size", 22, 16,0,1920,480.98);
+  @include adaptiveValue("font-size", 22, 18,0,1920,480.98);
   &:not(:last-child) {
     @extend %marBottom40-20;
   }

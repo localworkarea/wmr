@@ -3772,6 +3772,9 @@
                 nextEl: ".reviews__body .swiper-button-next"
             },
             breakpoints: {
+                320: {
+                    slidesPerView: 1.1
+                },
                 640: {
                     slidesPerView: 2
                 },
